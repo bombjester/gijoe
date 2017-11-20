@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="background" ng-controller="signup_controller">
+		<h1 style="text-align: center">Sign in Page</h1>
+		<button class="backbtn" ng-click="gohome()">Home</button>
+
+	<center>
+
+            <div class="addcontainer">
+            <form id="addforms" ng-submit="signin()">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username"  ng-model="box.username" required>
+
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password"  ng-model="box.password" required>
+                <label><b>Confirm Password</b></label>
+                <input type="password" placeholder="Confirm Password" ng-model="box.repassword" required>
+                <button ng-if="special" type="button" class="warnbtn">Username cannot have Special Characters</button>
+                <button ng-if="samename" type="button" class="warnbtn">User Taken</button>
+                <div ng-if="success">Success!</div>
+                <button ng-if="notmatched" type="button" class="warnbtn">Passwords do not match</button>
+                <button ng-if="!success" type="submit">Sign In</button>
+            </form>
+            </div>
+    </center>
+	</div>
+</body>
+</html>

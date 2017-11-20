@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+  <div ng-controller="login_controller">
+    <div class="bg"> 
+    </div>
+    <div class="title" ng-if="!showing">   
+          <h1>Welcome GI JOE Members</h1> 
+          <h2 id="hover" style="border: solid" ng-click="show()">Login</h2> 
+    </div>   
+    <div id="center" ng-if="showing">
+      <center>
+    
+            <div class="imgcontainer">
+              <img src="https://pbs.twimg.com/profile_images/839608018559905792/98d5oWuq_400x400.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+              <form id="forms" ng-submit="login()">
+              <label><b>Username</b></label>
+              <input class="refresh" type="text" placeholder="Enter Username Here" ng-model="loginbox.username" required>
+              <label><b>Password</b></label>
+              <input class="refresh" type="password" placeholder="Enter Password Here" ng-model="loginbox.password" required>
+              <center><button ng-if="note" type="button" class="warnbtn">Wrong Account or Password</button></center>
+              <button type="submit">Login</button>    
+              <!-- <input type="checkbox" checked="checked"> Remember me -->
+               </form>
+               <button ng-click="gosignup()">Not a Member? Sign up here</button>
+            </div>
+
+            <!-- <div class="container" style="background-color:#f1f1f1">
+              <button type="button" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div> -->
+       
+        
+      </center>
+      </div>
+    </div>
+</body>
+</html>

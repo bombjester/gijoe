@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class='background' ng-controller="user_controller">
+    	<h1> Update your information below</h1>
+    	<h2> logged in as: {{user}}</h2>
+    	<button class="backbtn" ng-click="goprofile()">Back</button>
+        <center>
+            <div class="addcontainer">
+
+    	       <form id="addform" ng-submit="addinfo()">
+                
+                    <label><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email"  ng-model="box.email" required>
+
+                    <label><b>Street Address</b></label>
+                    <input type="text" placeholder="Enter Adress"  ng-model="box.street" required>
+                    <label><b>City</b></label>
+                    <input type="text" placeholder="City" ng-model="box.city" required>
+                    <label><b>Zip Code</b></label>
+                    <input type="text" placeholder="Enter Zip Code" ng-model="box.zip" required>
+                    <label><b>State</b></label>
+                    <input type="text" placeholder="Enter State" ng-model="box.state" required>
+                    <label><b>Phone Number</b></label>
+                    <input type="tel" placeholder="Enter a Phone Number" ng-model="box.number" required>
+
+                    <button ng-if="special" type="button" class="warnbtn">Username cannot have Special Characters</button>
+                    
+                    <div ng-if="done">Success!</div>
+                    <button ng-if="!done" type="submit">Enter</button>
+                </form>
+            </div>
+
+        </center>
+    </div>
+</body>
+</html>

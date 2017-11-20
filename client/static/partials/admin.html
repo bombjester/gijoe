@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div class="adminbackground" ng-controller="admin_controller">
+		<h1> Welcome to the Admin Page!</h1>
+		<h1> Logged in as {{user}}</h1>
+		
+		<h2> User list</h2>
+		<div style="border: solid" ng-repeat="index in users">
+
+			<p>Username: {{index.username}}</p>
+			<p ng-repeat="data in index.address">Address: {{data.street}} <br> {{data.city}}, {{data.state}} {{data.zip}}</p>
+			<p>Email: {{index.email}}</p>
+			<p>Phone Number: {{index.phone}}</p>
+			<p>Hours: {{index.hours}}</p>
+
+		</div>
+		<button class="backbtn" ng-click="logout()">Log Out</button>
+	</div>
+</body>
+</html>
